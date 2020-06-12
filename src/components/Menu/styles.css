@@ -1,19 +1,19 @@
 .container-aside {
-  max-width: 200px;
-  display: inline-block;
-  text-align: center;
   border-right: 1px solid black;
+  display: inline-block;
   height: 100%;
   position: fixed;
+  text-align: center;
 }
 
 .container-aside > a {
+  align-items: center;
   display: block;
   font-size: 1.2rem;
-  align-items: center;
+  margin: 15px;
 }
 
 img {
-  width: 50px;
   height: 50px;
+  width: 50px;
 }

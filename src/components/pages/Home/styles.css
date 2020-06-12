@@ -1,5 +1,11 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
 .container-home {
   display: flex;
+  height: 100%;
 }
 
 .container-aside {
@@ -7,7 +13,4 @@
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
-}
-
-.container-header {
 }

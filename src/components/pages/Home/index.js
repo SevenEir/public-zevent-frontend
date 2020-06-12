@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '../../Menu';
 import Header from '../../Header';
+import ItemList from '../../EventList';
 import './styles.css';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="container-home">
       <Menu />
       <Header title="Home" />
+      <ItemList />
     </div>
   );
 }

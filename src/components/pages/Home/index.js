@@ -5,9 +5,8 @@ import './styles.css';
 
 export default function Home() {
   return (
-    <div className="container-home">
+    <>
       <Menu />
-      <Header title="Home" />
-    </div>
+    </>
   );
 }

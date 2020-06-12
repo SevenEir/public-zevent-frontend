@@ -3,12 +3,11 @@
   display: inline-block;
   text-align: center;
   border-right: 1px solid black;
-  padding-top: 40px;
+  height: 100%;
 }
 
 .container-aside > a {
   display: block;
-  padding: 15px;
   font-size: 1.2rem;
   align-items: center;
 }

@@ -1,3 +1,11 @@
-.header {
-  color: red;
+.container-header {
+  height: 100px;
+  border-bottom: solid 1px black;
+}
+
+.container-header > h1 {
+  display: block;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 20px;
 }

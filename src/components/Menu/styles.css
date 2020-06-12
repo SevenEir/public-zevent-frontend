@@ -1,3 +1,19 @@
-.menu {
-  color: green;
+.container-aside {
+  max-width: 200px;
+  display: inline-block;
+  text-align: center;
+  border-right: 1px solid black;
+  padding-top: 40px;
+}
+
+.container-aside > a {
+  display: block;
+  padding: 15px;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
 }

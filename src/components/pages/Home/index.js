@@ -6,10 +6,12 @@ import './styles.css';
 
 export default function Home() {
   return (
-    <div className="container-home">
+    <div className="container-menu">
       <Menu />
-      <Header title="Home" />
-      <ItemList />
+      <div className="container-content">
+        <Header title="Home" />
+        <ItemList />
+      </div>
     </div>
   );
 }

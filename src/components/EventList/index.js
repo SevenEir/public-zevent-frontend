@@ -1,5 +1,6 @@
 import React from 'react';
 import services from '../../services/eventService';
+import EventItem from '../EventItem';
 import './styles.css';
 
 class EventList extends React.Component {
@@ -13,11 +14,19 @@ class EventList extends React.Component {
     this.setState({ events: response, isLoading: false });
   }
 
+  renderEvents() {
+    const { events } = this.state;
+    return events.map((event) => {
+      return <EventItem key={event.id} event={event} />;
+    });
+  }
+
   render() {
-    return this.state.isLoading ? (
-      <h1>calmapoha</h1>
+    const { isLoading } = this.state;
+    return isLoading ? (
+      <h1 className="container-eventList">Aguarde...</h1>
     ) : (
-      <div>{this.state.events[0].name}</div>
+      <div className="container-eventList">{this.renderEvents()}</div>
     );
   }
 }

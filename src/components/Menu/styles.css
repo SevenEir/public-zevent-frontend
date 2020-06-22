@@ -1,12 +1,9 @@
 .container-aside {
   border-right: 1px solid black;
-  display: inline-block;
-  height: 100%;
   text-align: center;
 }
 
 .container-aside > a {
-  align-items: center;
   display: block;
   font-size: 1.2rem;
   margin: 15px;

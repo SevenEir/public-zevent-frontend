@@ -3,7 +3,7 @@
   width: 100vw;
 }
 
-.container-home {
+.container-menu {
   display: flex;
   height: 100%;
 }
@@ -14,3 +14,22 @@
   align-items: center;
   padding-top: 50px;
 }
+
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+
+ .container-header {
+   display: flex;
+ }
+
+ .container-eventList {
+   display: flex;
+   flex: 7;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: flex-start;
+ }

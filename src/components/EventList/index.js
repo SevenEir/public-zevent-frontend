@@ -1,6 +1,7 @@
 import React from 'react';
 import services from '../../services/eventService';
 import EventItem from '../EventItem';
+import Loading from '../Loading';
 import './styles.css';
 
 class EventList extends React.Component {
@@ -24,7 +25,9 @@ class EventList extends React.Component {
   render() {
     const { isLoading } = this.state;
     return isLoading ? (
-      <h1 className="container-eventList">Aguarde...</h1>
+      <div className="container-eventLoading">
+        <Loading />
+      </div>
     ) : (
       <div className="container-eventList">{this.renderEvents()}</div>
     );

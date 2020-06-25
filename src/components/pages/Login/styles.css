@@ -1,0 +1,47 @@
+.container-login {
+  display: flex;
+  flex: 1;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+}
+
+.container-auth {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-auth {
+    border: none;
+  }
+}
+
+.button-login, #email, #password {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline-style: none;
+}
+
+#email, #password {
+  width: 15rem;
+  height: 20px;
+}
+
+.button-login {
+  width: 8rem;
+  height: 3rem;
+  align-self: center;
+}
+
+.h1-login {
+  margin-bottom: 20px;
+  font-size: 25px;
+}

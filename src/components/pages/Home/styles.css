@@ -26,10 +26,20 @@
    display: flex;
  }
 
+
+.container-eventList, .container-eventLoading {
+  display: flex;
+  flex: 5;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
  .container-eventList {
-   display: flex;
-   flex: 7;
-   flex-direction: row;
-   flex-wrap: wrap;
-   align-content: flex-start;
- }
+  align-content: flex-start;
+}
+
+.container-eventLoading {
+  
+  align-content: center;
+  justify-content: center;
+}

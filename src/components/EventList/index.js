@@ -29,7 +29,20 @@ class EventList extends React.Component {
         <Loading />
       </div>
     ) : (
-      <div className="container-eventList">{this.renderEvents()}</div>
+      <>
+        <div className="container-event">
+          <div>
+            Filtro:
+            <select name="Áreas">
+              <option>Administração</option>
+              <option>Marketing</option>
+              <option>Tecnologia</option>
+            </select>
+          </div>
+          <button className="button-newEvent">Adicionar Evento</button>
+        </div>
+        <div className="container-eventList">{this.renderEvents()}</div>
+      </>
     );
   }
 }

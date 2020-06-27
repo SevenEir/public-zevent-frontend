@@ -2,3 +2,26 @@
   width: 50px;
   height: 50px;
 }
+
+.container-event {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.container-event select, .container-event button {
+  outline-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.button-newEvent {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+.button-newEvent:hover {
+  background-color: #FF6666;
+}

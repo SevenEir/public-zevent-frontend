@@ -21,16 +21,17 @@ export default function EventItem(props) {
       <p>Data: {getDateByDateTime(event.initDate)}</p>
       <p>Horário: {getHourByDateTime(event.initDate)}</p>
       <p>Assentos: {event.seats}</p>
+      <button className="eventItem-button">+ Informações</button>
     </div>
   );
 }
 
 EventItem.propTypes = {
-  event: {
-    id: PropTypes.String,
-    name: PropTypes.String,
-    initDate: PropTypes.Date,
-    seats: PropTypes.Number,
-    imageUrl: PropTypes.String,
-  },
+  event: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    //initDate: PropTypes.element,
+    seats: PropTypes.number,
+    imageUrl: PropTypes.string,
+  }),
 };

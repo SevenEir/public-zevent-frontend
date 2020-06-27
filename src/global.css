@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+}
+
+#root {
+  width: 100vw;
+}
+
+@media screen and (min-width: 1440px) {
+  #root {
+    width: 50vw;
+  }
+}

@@ -1,9 +1,4 @@
-@media screen and (min-width: 1440px) {
-  body {
-    font-size: 5rem;
-  }
-  
-  .container-eventList {
-
-  }
+.container-eventList img {
+  width: 50px;
+  height: 50px;
 }

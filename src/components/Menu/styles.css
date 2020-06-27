@@ -4,12 +4,22 @@
 }
 
 .container-aside > a {
+  background-color: ghostwhite;
+  border-radius: 10px;
   display: block;
   font-size: 1.2rem;
   margin: 15px;
+  min-width: 80px;
+  padding: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
 }
 
-img {
+.container-aside > a:hover {
+  background-color: #FF6666;
+}
+
+.container-aside > img {
   height: 50px;
   width: 50px;
 }

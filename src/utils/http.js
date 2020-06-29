@@ -11,15 +11,15 @@ class Http {
   }
 
   get(urlPath, params) {
-    return this.axios.get(this._getUrl(), params);
+    return this.axios.get(this._getUrl() + urlPath, params);
   }
 
   post(urlPath, params) {
-    return this.axios.post(this._getUrl(), params);
+    return this.axios.post(this._getUrl() + urlPath, params);
   }
 
   put(urlPath, params) {
-    return this.axios.put(this._getUrl(), params);
+    return this.axios.put(this._getUrl() + urlPath, params);
   }
 
   _getUrl() {
@@ -27,7 +27,7 @@ class Http {
   }
 }
 
-const baseUrl = 'https://zevent-core.herokuapp.com/api/public-event';
+const baseUrl = 'https://zevent-core.herokuapp.com/api';
 
 let http;
 if (!http) {

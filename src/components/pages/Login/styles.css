@@ -45,7 +45,9 @@
 }
 
 .button-login:hover {
-  background-color: #FF6666;
+  background-color: lightgreen;
+  border: none;
+  box-shadow: 1px 1px 5px 1px black;
 }
 
 .h1-login {

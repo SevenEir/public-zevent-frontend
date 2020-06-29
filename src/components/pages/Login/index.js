@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import loginService from '../../../services/loginService';
 import './styles.css';
 
@@ -23,19 +24,24 @@ class Login extends React.Component {
         <input 
           onChange={(e) => this.setState({email: e.target.value})} 
           value={email} 
-          id="email" 
+          className="input-email" 
           placeholder="Usuário">
         </input>
         <input 
           onChange={(e) => this.setState({password: e.target.value})} 
           value={password} 
-          id="password" 
+          className="input-password" 
           placeholder="Senha">
         </input>
-        <button type="submit" className="button-login">
-          Entrar
-        </button>
-        <a href="/">Esqueceu a senha?</a>
+        <div className="button-login">
+          <Link to="/user/new">
+            <button className="button-register">Cadastre-se</button>
+          </Link>
+          <button className="button-logIn" type="submit">
+            Entrar
+          </button>
+        </div>
+        <Link className="login-forgotPass" to="/user/forgotpassword">Esqueceu a senha?</Link>
       </form>
     </div>
     )

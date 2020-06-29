@@ -23,20 +23,24 @@
   }
 }
 
-.button-login, #email, #password {
+.h1-login {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.button-login button, .input-email, .input-password {
   border-radius: 10px;
   padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0px 10px 5px;
   outline-style: none;
 }
 
-#email, #password {
+.input-email, .input-password {
   width: 15rem;
   height: 20px;
 }
 
-.button-login {
+.button-login button {
   align-self: center;
   cursor: pointer;
   height: 3rem;
@@ -44,13 +48,30 @@
   transition: background-color 0.2s ease-in;
 }
 
-.button-login:hover {
-  background-color: lightgreen;
+.button-login button:hover {
   border: none;
   box-shadow: 1px 1px 5px 1px black;
 }
 
-.h1-login {
-  font-size: 25px;
-  margin-bottom: 20px;
+.button-register:hover {
+  background-color: #FF6666;
 }
+
+.button-logIn:hover {
+  background-color: lightgreen;
+}
+
+.login-forgotPass {
+  margin-top: 10px;
+  transition: color 0.2s ease-in;
+}
+
+.login-forgotPass, .login-forgotPass:visited, .login-forgotPass:link {
+  text-decoration: none;
+  color: black;
+}
+
+.login-forgotPass:hover {
+  color: #FF6666;
+}
+

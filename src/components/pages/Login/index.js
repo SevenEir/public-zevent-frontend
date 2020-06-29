@@ -9,17 +9,18 @@ class Login extends React.Component {
     this.state = { email: '', password: '' };
   }
   
-  userReq = () => {
+  userReq = (e) => {
     const { email, password } = this.state;
-    const response = loginService.getUser(email, password);
-    localStorage.setItem('token', response.token);
+    e.preventDefault();
+    const response = loginService(email, password);
+    localStorage.setItem('token', response.access_token);
   }
   
   render() {
     const { email, password } = this.state;
     return(
     <div className="container-login">
-      <form className="container-auth" onSubmit={this.userReq()}>
+      <form className="container-auth" onSubmit={(event) => this.userReq(event)}>
         <h1 className="h1-login">Bem vindo!</h1>
         <input 
           onChange={(e) => this.setState({email: e.target.value})} 
@@ -28,6 +29,7 @@ class Login extends React.Component {
           placeholder="Usuário">
         </input>
         <input 
+          type="password"
           onChange={(e) => this.setState({password: e.target.value})} 
           value={password} 
           className="input-password" 

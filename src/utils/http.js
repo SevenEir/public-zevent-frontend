@@ -27,7 +27,7 @@ class Http {
   }
 }
 
-const baseUrl = 'https://zevent-core.herokuapp.com/api';
+const baseUrl = 'https://zevent-core.herokuapp.com/';
 
 let http;
 if (!http) {

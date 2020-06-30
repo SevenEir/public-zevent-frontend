@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 async function loginService(login, password) {
-  return await fetch('https://zevent-security.herokuapp.com/login', {
+  return fetch('https://zevent-security.herokuapp.com/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -10,7 +10,9 @@ async function loginService(login, password) {
       username: login,
       password: password,
     }),
-  });
+  })
+    .then((res) => res.json())
+    .then((json) => json);
 }
 
 export default loginService;

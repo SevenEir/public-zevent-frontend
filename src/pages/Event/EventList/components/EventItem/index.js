@@ -30,7 +30,6 @@ EventItem.propTypes = {
   event: PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
-    //initDate: PropTypes.element,
     seats: PropTypes.number,
     imageUrl: PropTypes.string,
   }),

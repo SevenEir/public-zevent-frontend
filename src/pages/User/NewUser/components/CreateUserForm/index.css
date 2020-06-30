@@ -1,0 +1,39 @@
+.container-form {
+    display: flex;
+}
+
+.user-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image > img {
+    width: 80px;
+    height: 80px;
+}
+
+.user-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.group-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* container-form
+content-user-details
+  user-image
+      <img src={this.state.userImage} alt="Capa do usuário" />
+    <input  type="file"
+  user-information
+    form-label-input
+    content-user-gender */

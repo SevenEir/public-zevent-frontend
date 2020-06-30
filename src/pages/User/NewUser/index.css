@@ -1,0 +1,13 @@
+.container-new-user {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content-header {
+  flex: 1
+}
+
+.content-form-user {
+  flex: 5;
+}

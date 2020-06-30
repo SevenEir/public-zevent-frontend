@@ -31,7 +31,7 @@ class Http {
   }
 }
 
-const baseUrl = 'https://zevent-core.herokuapp.com/';
+const baseUrl = 'https://localhost:8080/';
 
 let http;
 if (!http) {

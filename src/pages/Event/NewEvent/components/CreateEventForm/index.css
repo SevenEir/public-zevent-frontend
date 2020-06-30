@@ -1,0 +1,24 @@
+.container-new-event-form {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+}
+
+.content-tabs {
+  display: flex;
+}
+
+.tab-item {
+  display: flex;
+  border: 1px solid black;
+  flex: 0.1;
+  padding: 5px 2px;
+}
+
+.selected {
+  background-color: rgb(104, 104, 104);
+}
+
+.tab-item-title {
+  font-size: 16px;
+}

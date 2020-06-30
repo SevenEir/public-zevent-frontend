@@ -1,0 +1,90 @@
+/* commom */
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    flex: 1;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.form-label-input {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-label-input > input,
+.form-label-input > select,
+.form-label-input > checkbox,
+.form-label-input > textarea {
+    margin-left: 5px;
+}
+
+.input-text {}
+
+.input-select {
+    width: 150px;
+    height: 20px;
+    border-radius: 0;
+    box-shadow: 0;
+}
+
+.handle-steps-button {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.handle-steps-button > button {
+    background-color: transparent;
+}
+/* event */
+.form-event {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 120px;
+    height: 145px;
+    margin-top: 5px;
+}
+
+.event-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area-input > textarea {
+    width: 100%;
+}
+
+.event-price-description {
+    display: flex;
+}

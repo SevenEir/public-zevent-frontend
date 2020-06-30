@@ -1,7 +1,7 @@
 import React from 'react';
-import Menu from '../../Menu';
-import Header from '../../Header';
-import ItemList from '../../EventList';
+import Menu from './../../components/Menu';
+import Header from './../../components/Header';
+import ItemList from './../Event/EventList';
 import './styles.css';
 
 export default function Home() {

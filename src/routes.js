@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import Home from './components/pages/Home';
-import Login from './components/pages/Login';
-import NewEvent from './components/pages/NewEvent';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import NewEvent from './pages/Event/EventList';
+import NewUser from './pages/User/NewUser';
 
 export default function Routes() {
   return (
@@ -12,6 +13,7 @@ export default function Routes() {
         <Route path="/home" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/event/new" component={NewEvent} />
+        <Route path="/user/new" component={NewUser} />
       </Switch>
     </BrowserRouter>
   );

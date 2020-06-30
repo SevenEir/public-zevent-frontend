@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import eventServices from '../../services/eventService';
-//import userServices from '../../services/userService';
+import userServices from '../../services/userService';
 import EventItem from '../EventItem';
 import NewEvent from '../pages/NewEvent';
 import Loading from '../Loading';
@@ -15,8 +15,12 @@ class EventList extends React.Component {
 
   async componentDidMount() {
     const response = await eventServices.getEvents();
-    //await userServices.getUserInfo();
-    this.setState({ events: response, isLoading: false });
+    const userData = await userServices.getUserInfo();
+    this.setState({
+      events: response,
+      isLoading: false,
+      userRole: userData.roles[0].authority,
+    });
   }
 
   renderEvents() {
@@ -27,7 +31,7 @@ class EventList extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, userRole } = this.state;
     return isLoading ? (
       <div className="container-eventLoading">
         <Loading />
@@ -44,10 +48,14 @@ class EventList extends React.Component {
             </select>
           </div>
           <Link to={NewEvent}>
-            <button className="button-newEvent">Adicionar Evento</button>
+            {userRole === 'ADMIN' || userRole === 'EVENT_ADMIN' ? (
+              <button className="button-newEvent">Adicionar Evento</button>
+            ) : (
+              ''
+            )}
           </Link>
         </div>
-        <div className="container-eventList">{this.renderEvents}</div>
+        <div className="container-eventList">{this.renderEvents()}</div>
       </>
     );
   }

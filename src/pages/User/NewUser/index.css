@@ -1,11 +1,7 @@
 .container-new-user {
   display: flex;
+  flex: 5;
   flex-direction: column;
-  flex: 1;
-}
-
-.content-header {
-  flex: 1
 }
 
 .content-form-user {

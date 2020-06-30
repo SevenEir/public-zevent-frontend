@@ -28,12 +28,3 @@
     display: flex;
     justify-content: space-around;
 }
-
-/* container-form
-content-user-details
-  user-image
-      <img src={this.state.userImage} alt="Capa do usuário" />
-    <input  type="file"
-  user-information
-    form-label-input
-    content-user-gender */

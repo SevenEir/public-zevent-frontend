@@ -49,4 +49,5 @@ body {
 
  .container-header {
    display: flex;
+   flex: 1;
  }

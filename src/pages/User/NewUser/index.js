@@ -10,9 +10,7 @@ export default function NewUser() {
     <div className="container-menu">
       <Menu />
       <div className="container-new-user">
-        <div className="content-header">
-          <Header title="Novo Usuário" />
-        </div>
+        <Header title="Novo Usuário" />
         <div className="content-form-user">
           <CreateUserForm />
         </div>

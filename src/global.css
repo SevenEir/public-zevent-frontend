@@ -26,3 +26,27 @@ body {
     width: 50vw;
   }
 }
+
+.container-menu {
+  border-right: 1px solid black;
+  display: flex;
+  height: 100%;
+}
+
+.container-aside {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+
+.container-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+ }
+
+ .container-header {
+   display: flex;
+ }

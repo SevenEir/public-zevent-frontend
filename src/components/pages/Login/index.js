@@ -9,10 +9,11 @@ class Login extends React.Component {
     this.state = { email: '', password: '' };
   }
   
-  userReq = (e) => {
+  userReq = async (e) => {
     const { email, password } = this.state;
     e.preventDefault();
-    const response = loginService(email, password);
+    const response = await loginService(email, password);
+    console.log(response)
     localStorage.setItem('token', response.access_token);
   }
   

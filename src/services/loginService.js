@@ -1,19 +1,16 @@
-import axios from 'axios';
+import fetch from 'node-fetch';
 
-function loginService(login, password) {
-  return axios
-    .post('https://zevent-core.herokuapp.com/oauth/token', {
-      body: {
-        grant_type: 'password',
-        login,
-        password,
-      },
-      auth: {
-        username: 'zevent-client',
-        password: '123',
-      },
-    })
-    .then(({ data }) => data);
+async function loginService(login, password) {
+  return await fetch('https://zevent-security.herokuapp.com/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      username: login,
+      password: password,
+    }),
+  });
 }
 
 export default loginService;

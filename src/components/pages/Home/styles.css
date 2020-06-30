@@ -1,28 +1,3 @@
-.container-menu {
-  border-right: 1px solid black;
-  display: flex;
-  height: 100%;
-}
-
-.container-aside {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-}
-
-
-.container-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
- }
-
- .container-header {
-   display: flex;
- }
-
-
 .container-eventList, .container-eventLoading {
   display: flex;
   flex: 5;
@@ -36,7 +11,6 @@
 }
 
 .container-eventLoading {
-  
   align-content: center;
   justify-content: center;
 }

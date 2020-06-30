@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import services from '../../services/eventService';
 import EventItem from '../EventItem';
+import NewEvent from '../pages/NewEvent';
 import Loading from '../Loading';
 import './styles.css';
 
@@ -39,9 +41,11 @@ class EventList extends React.Component {
               <option>Tecnologia</option>
             </select>
           </div>
-          <button className="button-newEvent">Adicionar Evento</button>
+          <Link to={NewEvent}>
+            <button className="button-newEvent">Adicionar Evento</button>
+          </Link>
         </div>
-        <div className="container-eventList">{this.renderEvents()}</div>
+        <div className="container-eventList">{this.renderEvents}</div>
       </>
     );
   }

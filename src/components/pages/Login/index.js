@@ -1,23 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import loginService from '../../../services/loginService';
+import { Redirect } from 'react-router-dom';
+import Home from '../Home'
 import './styles.css';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: '', password: '' };
+    this.state = { email: '', password: '', redirect: false };
   }
   
   userReq = async (e) => {
     const { email, password } = this.state;
     e.preventDefault();
     const response = await loginService(email, password);
-    console.log(response)
+    response.access_token ? this.setState({ redirect:true }) : this.setState({ redirect:'err' });
     localStorage.setItem('token', response.access_token);
   }
   
   render() {
+    if (this.state.redirect === true) { 
+      return <Redirect to='/home' />
+    }
+    else if (this.state.redirect === 'err') {
+      alert('User invalido')
+    }
     const { email, password } = this.state;
     return(
     <div className="container-login">
@@ -40,9 +48,7 @@ class Login extends React.Component {
           <Link to="/user/new">
             <button className="button-register">Cadastre-se</button>
           </Link>
-          <button className="button-logIn" type="submit">
-            Entrar
-          </button>
+            <button className="button-logIn" type="submit">Entrar</button>
         </div>
         <Link className="login-forgotPass" to="/user/forgotpassword">Esqueceu a senha?</Link>
       </form>

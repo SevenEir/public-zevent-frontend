@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import services from '../../services/eventService';
+import eventServices from '../../services/eventService';
+//import userServices from '../../services/userService';
 import EventItem from '../EventItem';
 import NewEvent from '../pages/NewEvent';
 import Loading from '../Loading';
@@ -13,7 +14,8 @@ class EventList extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await services.getEvents();
+    const response = await eventServices.getEvents();
+    //await userServices.getUserInfo();
     this.setState({ events: response, isLoading: false });
   }
 

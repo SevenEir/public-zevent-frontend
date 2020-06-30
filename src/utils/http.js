@@ -2,10 +2,14 @@ import axios from 'axios';
 
 class Http {
   constructor({ baseUrl }) {
+    // const token = localStorage.getItem('token');
     this.baseUrl = baseUrl;
     this.axios = axios.create({
       header: {
         'Content-type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Accept: 'application/json',
+        'Accept-Charset': 'utf-8',
       },
     });
   }

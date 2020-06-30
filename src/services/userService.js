@@ -3,10 +3,9 @@
 const fetch = require('node-fetch');
 
 export default {
-  getEvents() {
-    return fetch('https://zevent-core.herokuapp.com/api/public-event', {
+  getUserInfo() {
+    return fetch('https://zevent-core.herokuapp.com/api/user/get-actual-user', {
       method: 'GET',
-
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${localStorage.getItem('token')}`,

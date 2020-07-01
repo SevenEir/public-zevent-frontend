@@ -17,6 +17,7 @@ class EventList extends React.Component {
     const response = await eventServices.getEvents();
     this.setState({ events: response, isLoading: false });
     const userData = await userServices.getUserInfo();
+    localStorage.setItem('userId', userData.id);
     this.setState({
       events: response,
       isLoading: false,

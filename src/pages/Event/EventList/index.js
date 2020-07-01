@@ -48,13 +48,13 @@ class EventList extends React.Component {
               <option>Tecnologia</option>
             </select>
           </div>
-          <Link to={NewEvent}>
-            {userRole === 'ADMIN' || userRole === 'EVENT_ADMIN' ? (
+          {userRole === 'ADMIN' || userRole === 'EVENT_ADMIN' ? (
+            <Link to="/event/new">
               <button className="button-newEvent">Adicionar Evento</button>
-            ) : (
-              ''
-            )}
-          </Link>
+            </Link>
+          ) : (
+            ''
+          )}
         </div>
         <div className="container-eventList">{this.renderEvents()}</div>
       </>

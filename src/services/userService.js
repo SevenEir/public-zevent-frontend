@@ -18,7 +18,6 @@ export default {
   },
 
   createUser(data) {
-    console.log('data', data);
     return fetch('https://zevent-core.herokuapp.com/api/user', {
       method: 'POST',
       headers: {

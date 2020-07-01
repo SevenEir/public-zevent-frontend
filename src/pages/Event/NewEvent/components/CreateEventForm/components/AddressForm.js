@@ -7,25 +7,23 @@ export default class AddressForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      zipCode: '',
-      address: '',
+      postalCode: '',
+      addressStreet: '',
       addressNumber: '',
       addressComplement: '',
       addressNeighborhood: '',
       addressState: '',
       addressCity: '',
       initialDate: new Date(),
-      finalDate: '',
-      initialHour: '',
-      finalhour: '',
+      finishDate: ''
     };
   }
 
   getAddressByCep = () => {
-    if (this.state.zipCode.length < 8) return;
+    if (this.state.postalCode.length < 8) return;
 
-    cep(this.state.zipCode).then(r => this.setState({
-      address: r.street,
+    cep(this.state.postalCode).then(r => this.setState({
+      addressStreet: r.street,
       addressNeighborhood: r.neighborhood,
       addressState: r.state,
       addressCity: r.city,
@@ -34,17 +32,15 @@ export default class AddressForm extends Component {
 
   render() {
     const {
-      zipCode,
-      address,
+      postalCode,
+      addressStreet,
       addressNumber,
       addressComplement,
       addressNeighborhood,
       addressState,
       addressCity,
       initialDate,
-      finalDate,
-      initialHour,
-      finalhour,
+      finishDate,
     } = this.state;
 
     return (
@@ -52,15 +48,15 @@ export default class AddressForm extends Component {
         <form>
           <div className="content-form-address">
             <div className="content-address-details">
-              <div className="address-zipCode">
+              <div className="address-postalCode">
                 <div className="form-label-input">
                   CEP:
                   <input
                     type="text"
                     onBlur={() => this.getAddressByCep()}
                     maxLength={8}
-                    onChange={(e) => this.setState({ zipCode: e.target.value })}
-                    value={zipCode}
+                    onChange={(e) => this.setState({ postalCode: e.target.value })}
+                    value={postalCode}
                   />
                 </div>
               </div>
@@ -69,8 +65,8 @@ export default class AddressForm extends Component {
                   Logradouro:
                   <input
                     type="text"
-                    onChange={(e) => this.setState({ address: e.target.value })}
-                    value={address}
+                    onChange={(e) => this.setState({ addressStreet: e.target.value })}
+                    value={addressStreet}
                   />
                 </div>
                 <div className="form-label-input">
@@ -128,7 +124,7 @@ export default class AddressForm extends Component {
                 <div className="form-label-input">
                   Data inicial:
                   <input
-                    type="date"
+                    type="datetime"
                     value={initialDate}
                     onChange={(e) =>
                       this.setState({
@@ -140,35 +136,11 @@ export default class AddressForm extends Component {
                 <div className="form-label-input">
                   Data Final:
                   <input
-                    type="date"
-                    value={finalDate}
+                    type="datetime"
+                    value={finishDate}
                     onChange={(e) =>
                       this.setState({
-                        finalDate: e.target.value,
-                      })
-                    }
-                  />
-                </div>
-                <div className="form-label-input">
-                  Hora inicial:
-                  <input
-                    type="text"
-                    value={initialHour}
-                    onChange={(e) =>
-                      this.setState({
-                        initialHour: e.target.value,
-                      })
-                    }
-                  />
-                </div>
-                <div className="form-label-input">
-                  Hora Final:
-                  <input
-                    type="text"
-                    value={finalhour}
-                    onChange={(e) =>
-                      this.setState({
-                        finalhour: e.target.value,
+                        finishDate: e.target.value,
                       })
                     }
                   />

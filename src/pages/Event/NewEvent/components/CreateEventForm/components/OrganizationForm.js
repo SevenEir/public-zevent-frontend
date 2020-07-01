@@ -9,7 +9,6 @@ export default class OrganizationForm extends Component {
       organizationName: '',
       organizationSocialName: '',
       organizationOcuppation: '',
-      organizationNeighborhood: '',
     };
   }
   render() {

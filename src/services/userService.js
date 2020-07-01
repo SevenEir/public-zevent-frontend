@@ -16,4 +16,19 @@ export default {
       .then((res) => res.json())
       .then((json) => json);
   },
+
+  createUser(data) {
+    return fetch('https://zevent-core.herokuapp.com/api/user/get-actual-user', {
+      method: 'GET',
+      body: data,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Accept: 'application/json',
+        'Accept-Charset': 'utf-8',
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => console.log('json', json));
+  },
 };

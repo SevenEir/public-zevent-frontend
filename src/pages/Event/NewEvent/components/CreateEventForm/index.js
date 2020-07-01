@@ -40,7 +40,7 @@ export default class CreateEvent extends Component {
       value,
       seats: 250,
       imageUrl: 'foo',
-      initialDate: address.initialDate,
+      initDate: address.initDate,
       finishDate: address.finishDate,
       organization: {
         socialReason: organization.organizationSocialName,

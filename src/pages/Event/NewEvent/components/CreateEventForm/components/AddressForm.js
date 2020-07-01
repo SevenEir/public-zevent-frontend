@@ -14,8 +14,8 @@ export default class AddressForm extends Component {
       addressNeighborhood: '',
       addressState: '',
       addressCity: '',
-      initialDate: new Date(),
-      finishDate: ''
+      initDate: new Date(),
+      finishDate: new Date(),
     };
   }
 
@@ -39,7 +39,7 @@ export default class AddressForm extends Component {
       addressNeighborhood,
       addressState,
       addressCity,
-      initialDate,
+      initDate,
       finishDate,
     } = this.state;
 
@@ -125,10 +125,10 @@ export default class AddressForm extends Component {
                   Data inicial:
                   <input
                     type="datetime"
-                    value={initialDate}
+                    value={initDate}
                     onChange={(e) =>
                       this.setState({
-                        initialDate: e.target.value,
+                        initDate: e.target.value,
                       })
                     }
                   />

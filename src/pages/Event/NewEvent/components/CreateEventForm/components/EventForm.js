@@ -7,10 +7,10 @@ export default class EventForm extends Component {
     super(props);
     this.state = {
       name: '',
-      category: '',
+      category: 'TECHNOLOGY',
       desc: '',
       eventIsPaid: false,
-      type: '',
+      type: 'PUBLIC',
       eventValue: '',
     };
   }

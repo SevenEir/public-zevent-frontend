@@ -44,7 +44,11 @@
 .form-event {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    height: 400px;
+}
+
+.form {
+  height: 400px;
 }
 
 .event-details {

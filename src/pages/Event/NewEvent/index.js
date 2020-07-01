@@ -8,13 +8,9 @@ export default function NewEvent() {
   return (
     <div className="container-menu">
       <Menu />
-      <div className="container-new-event">
-        <div className="content-header">
-          <Header title="Novo Evento" />
-        </div>
-        <div className="content-form-event">
-          <CreateEvent />
-        </div>
+      <div className="container-content">
+        <Header title="Novo Evento" />
+        <CreateEvent />
       </div>
     </div>
   );

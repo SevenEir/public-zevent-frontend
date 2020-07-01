@@ -108,7 +108,7 @@ export default class CreateUserForm extends Component {
     } = this.state;
 
     return (
-      <form className="container-form" onSubmit={() => this.submitData()}>
+      <form className="container-menu" onSubmit={() => this.submitData()}>
         <div className="user-details">
           <div className="user-image">
             Foto do Usuário

@@ -1,13 +1,6 @@
-.container-new-event {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.content-header {
-    flex: 1
-}
-
-.content-form-event {
-    flex: 5;
+.container-new-event-form {
+  display: flex;
+  flex: 5;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

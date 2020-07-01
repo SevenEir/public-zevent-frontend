@@ -80,7 +80,7 @@ export default class OrganizationForm extends Component {
           </button>
 
           <button onClick={() => this.props.saveEvent(this.state)}>
-            Dados da Organização
+            Salvar Evento
           </button>
         </div>
       </div>

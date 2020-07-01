@@ -46,8 +46,8 @@ export default class EventForm extends Component {
                   onChange={(e) => this.setState({ type: e.target.value })}
                   value={type}
                 >
-                  <option>Presencial</option>
-                  <option>Online</option>
+                  <option value="PUBLIC">Publico</option>
+                  <option value="PRIVATE">Privado</option>
                 </select>
               </div>
               <div className="form-label-input">
@@ -58,11 +58,9 @@ export default class EventForm extends Component {
                   onChange={(e) => this.setState({ category: e.target.value })}
                   value={category}
                 >
-                  <option value="Tecnologia">Tecnologia</option>
-                  <option value="Cloud">Cloud</option>
-                  <option value="Segurança da Informação">
-                    Segurança da Informação
-                  </option>
+                  <option value="TECHNOLOGY">Tecnologia</option>
+                  <option value="AUTOMOBILISTIC">Automobílistica</option>
+                  <option value="GASTRONOMIC">Gastronomia</option>
                 </select>
               </div>
             </div>

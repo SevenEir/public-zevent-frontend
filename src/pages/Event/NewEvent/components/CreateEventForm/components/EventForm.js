@@ -79,7 +79,9 @@ export default class EventForm extends Component {
                   type="checkbox"
                   className="input-checkbox"
                   checked={eventIsPaid}
-                  onChange={() => this.setState({ eventIsPaid: !eventIsPaid })}
+                  onChange={() =>
+                    this.setState({ eventIsPaid: !eventIsPaid, eventValue: '' })
+                  }
                 />
                 Gratuito
               </div>

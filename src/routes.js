@@ -15,7 +15,7 @@ export default function Routes() {
         <Route path="/login" component={Login} />
         <Route path="/event/new" component={NewEvent} />
         <Route path="/user/new" component={NewUser} />
-        <Route path="/event" component={EventDetail} />
+        <Route path="/event/:id" component={EventDetail} />
       </Switch>
     </BrowserRouter>
   );

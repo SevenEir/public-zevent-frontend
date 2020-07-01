@@ -5,13 +5,13 @@ import Header from '../../../components/Header';
 import './styles.css';
 
 export default function EventDetail(props) {
-  console.log(props.id);
+  const { id } = props.match.params;
   return (
     <div className="container-menu">
       <Menu />
       <div className="container-content">
         <Header title={'Evento'} />
-        <Event id={props.id} />
+        <Event id={id} />
       </div>
     </div>
   );

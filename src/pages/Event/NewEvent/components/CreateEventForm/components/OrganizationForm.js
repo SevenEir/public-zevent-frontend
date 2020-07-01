@@ -9,7 +9,6 @@ export default class OrganizationForm extends Component {
       organizationName: '',
       organizationSocialName: '',
       organizationOcuppation: '',
-      organizationNeighborhood: '',
     };
   }
   render() {
@@ -81,7 +80,7 @@ export default class OrganizationForm extends Component {
           </button>
 
           <button onClick={() => this.props.saveEvent(this.state)}>
-            Dados da Organização
+            Salvar Evento
           </button>
         </div>
       </div>

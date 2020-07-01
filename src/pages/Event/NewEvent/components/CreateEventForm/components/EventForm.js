@@ -6,23 +6,16 @@ export default class EventForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eventTitle: '',
-      eventCategory: '',
-      eventDescription: '',
+      name: '',
+      category: 'TECHNOLOGY',
+      desc: '',
       eventIsPaid: false,
-      eventType: '',
+      type: 'PUBLIC',
       eventValue: '',
     };
   }
   render() {
-    const {
-      eventTitle,
-      eventCategory,
-      eventDescription,
-      eventIsPaid,
-      eventType,
-      eventValue,
-    } = this.state;
+    const { name, category, desc, eventIsPaid, type, eventValue } = this.state;
 
     return (
       <div className="container-form">
@@ -41,10 +34,8 @@ export default class EventForm extends Component {
                 <input
                   type="text"
                   className="input-text"
-                  onChange={(e) =>
-                    this.setState({ eventTitle: e.target.value })
-                  }
-                  value={eventTitle}
+                  onChange={(e) => this.setState({ name: e.target.value })}
+                  value={name}
                 />
               </div>
               <div className="form-label-input">
@@ -52,11 +43,11 @@ export default class EventForm extends Component {
                 <select
                   type="select"
                   className="input-select"
-                  onChange={(e) => this.setState({ eventType: e.target.value })}
-                  value={eventType}
+                  onChange={(e) => this.setState({ type: e.target.value })}
+                  value={type}
                 >
-                  <option>Presencial</option>
-                  <option>Online</option>
+                  <option value="PUBLIC">Publico</option>
+                  <option value="PRIVATE">Privado</option>
                 </select>
               </div>
               <div className="form-label-input">
@@ -64,16 +55,12 @@ export default class EventForm extends Component {
                 <select
                   type="select"
                   className="input-select"
-                  onChange={(e) =>
-                    this.setState({ eventCategory: e.target.value })
-                  }
-                  value={eventCategory}
+                  onChange={(e) => this.setState({ category: e.target.value })}
+                  value={category}
                 >
-                  <option value="Tecnologia">Tecnologia</option>
-                  <option value="Cloud">Cloud</option>
-                  <option value="Segurança da Informação">
-                    Segurança da Informação
-                  </option>
+                  <option value="TECHNOLOGY">Tecnologia</option>
+                  <option value="AUTOMOBILISTIC">Automobílistica</option>
+                  <option value="GASTRONOMIC">Gastronomia</option>
                 </select>
               </div>
             </div>
@@ -82,10 +69,8 @@ export default class EventForm extends Component {
             <div className="form-label-input text-area-input">
               Descrição
               <textarea
-                value={eventDescription}
-                onChange={(e) =>
-                  this.setState({ eventDescription: e.target.value })
-                }
+                value={desc}
+                onChange={(e) => this.setState({ desc: e.target.value })}
               />
             </div>
             <div className="event-price-description">
@@ -94,7 +79,9 @@ export default class EventForm extends Component {
                   type="checkbox"
                   className="input-checkbox"
                   checked={eventIsPaid}
-                  onChange={() => this.setState({ eventIsPaid: !eventIsPaid })}
+                  onChange={() =>
+                    this.setState({ eventIsPaid: !eventIsPaid, eventValue: '' })
+                  }
                 />
                 Gratuito
               </div>

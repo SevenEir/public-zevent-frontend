@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EventForm from './components/EventForm';
 import AddressForm from './components/AddressForm';
 import OrganizationForm from './components/OrganizationForm';
+import eventService from './../../../../../services/eventService';
 import './index.css';
 
 // NÃO USAR DE MODELO
@@ -24,13 +25,54 @@ export default class CreateEvent extends Component {
     })
   }
 
-  saveEvent = (OrganizationFormData) => {
+  saveEvent = async (OrganizationFormData) => {
     this.setState({ organization: OrganizationFormData });
 
+    const { event, address, organization } = this.state;
+
+    const value = event.eventIsPaid ? 0 : event.eventValue;
+
+    const data = {
+      name: event.name,
+      category: event.category,
+      type: event.type,
+      desc: event.desc,
+      value,
+      seats: 250,
+      imageUrl: 'foo',
+      initDate: address.initDate,
+      finishDate: address.finishDate,
+      organization: {
+        socialReason: organization.organizationSocialName,
+        fantasyName: organization.organizationName,
+        CNPJ: organization.cnpj,
+        actuationArea: organization.organizationSocialName,
+        address: {
+          postalCode: "04538133",
+          country: "Brasil",
+          state: "SP",
+          city: "São Paulo",
+          neighborhood: "Jardim Paulista",
+          street: "Avenida Luciano Costa",
+          number: "7955",
+          complement: "12° Andar"
+        }
+      },
+      address: {
+        postalCode: address.postalCode,
+        country: "Brasil",
+        state: address.addressState,
+        city: address.addressCity,
+        neighborhood: address.addressNeighborhood,
+        street: address.addressStreet,
+        number: address.addressNumber,
+        complement: address.addressComplement
+      }
+    }
+    const response = await eventService.createEvent(data);
   }
 
   render() {
-    console.log("this", this.state);
     const steps = [
       { title: 'Evento', section: EventForm },
       { title: 'Endereço', section: AddressForm },

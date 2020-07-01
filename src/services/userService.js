@@ -16,4 +16,18 @@ export default {
       .then((res) => res.json())
       .then((json) => json);
   },
+
+  createUser(data) {
+    return fetch('https://zevent-core.herokuapp.com/api/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Accept-Charset': 'utf-8',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((json) => console.log('json', json));
+  },
 };

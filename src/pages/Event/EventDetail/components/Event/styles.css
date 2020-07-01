@@ -1,0 +1,47 @@
+.container-event-detail {
+  display: flex;
+  text-align: center;
+  padding: 15px;
+}
+
+.container-event-detail img {
+  width: 90px;
+  height: 90px;
+}
+
+.container-event-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-event-content {
+
+}
+
+.container-event-content > h1 {
+  padding: 50px;
+  font-size: 140%;
+}
+
+.container-event-desc {
+  text-align: left;
+  padding-top: 20px;
+  font-size: 110%;
+}
+
+.container-event-desc > p {
+  padding: 5px;
+}
+
+.button-back {
+  outline-style: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+.button-back:hover {
+  background-color: lightblue;
+}

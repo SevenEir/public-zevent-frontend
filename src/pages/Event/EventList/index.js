@@ -44,6 +44,7 @@ class EventList extends React.Component {
           <div>
             Filtro:
             <select name="Áreas">
+              <option>Todos</option>
               <option>Administração</option>
               <option>Marketing</option>
               <option>Tecnologia</option>

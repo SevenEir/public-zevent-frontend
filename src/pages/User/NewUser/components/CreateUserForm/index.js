@@ -270,11 +270,9 @@ export default class CreateUserForm extends Component {
           </div>
         </div>
         <div className="button-submit">
-          <Link to={'/'}>
-            <button type="submit">
-              Concluir Cadastro
+          <button type="submit">
+            Concluir Cadastro
             </button>
-          </Link>
           <Link to={'/'}  >
             <button type="button">
               Cancelar

@@ -19,7 +19,7 @@ export default {
   },
 
   createEvent(data) {
-    return fetch('https://zevent-core.herokuapp.com/api/public-event', {
+    return fetch('https://zevent-core.herokuapp.com/api/event', {
       method: 'POST',
       body: data,
       headers: {

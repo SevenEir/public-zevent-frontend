@@ -7,3 +7,23 @@
 .content-form-user {
   flex: 5;
 }
+
+.content-new-event-form {
+  padding: 5px;
+}
+
+.container-form {
+  padding: 5px;
+}
+
+.input-text, .input-select {
+  
+}
+
+.form-label-input, .handle-steps-button > a, .handle-steps-button > button {
+  
+}
+
+.input-text, .input-select, .form-label-input, .handle-steps-button > a, .handle-steps-button > button {
+  border-radius: 5px;
+}

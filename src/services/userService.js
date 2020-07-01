@@ -18,15 +18,15 @@ export default {
   },
 
   createUser(data) {
+    console.log('data', data);
     return fetch('https://zevent-core.herokuapp.com/api/user', {
       method: 'POST',
-      body: data,
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
         Accept: 'application/json',
         'Accept-Charset': 'utf-8',
       },
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((json) => console.log('json', json));

@@ -73,7 +73,6 @@ export default class CreateEvent extends Component {
   }
 
   render() {
-    console.log("this", this.state);
     const steps = [
       { title: 'Evento', section: EventForm },
       { title: 'Endereço', section: AddressForm },

@@ -46,7 +46,9 @@ export default class CreateUserForm extends Component {
     })).catch(console.log);
   }
 
-  submitData = async () => {
+  submitData = async (e) => {
+    e.preventDefault();
+
     const {
       userName,
       userBirthday,
@@ -71,7 +73,7 @@ export default class CreateUserForm extends Component {
           name: "USER"
         }
       ],
-      gender: userGender,
+      gender: "MALE",
       phone: userPhone,
       email: userEmail,
       password: userPassword,
@@ -108,7 +110,7 @@ export default class CreateUserForm extends Component {
     } = this.state;
 
     return (
-      <form className="container-form" onSubmit={() => this.submitData()}>
+      <form className="container-form" onSubmit={(e) => this.submitData(e)}>
         <div className="user-details">
           <div className="user-image">
             Foto do Usuário
@@ -133,15 +135,15 @@ export default class CreateUserForm extends Component {
                 Genêro:
                   <input
                   type="radio"
-                  value="female"
-                  onSelect={() => this.setState({ userGender: 'female' })}
-                  checked={userGender === 'female'}
+                  value="FEMALE"
+                  onChange={() => this.setState({ userGender: 'FEMALE' })}
+                  checked={userGender === 'FEMALE'}
                 /> Feminino
                   <input
                   type="radio"
-                  value="male"
-                  onSelect={() => this.setState({ userGender: 'male' })}
-                  checked={userGender === 'male'}
+                  value="MALE"
+                  onChange={() => this.setState({ userGender: 'MALE' })}
+                  checked={userGender === 'MALE'}
                 /> Masculino
                 </div>
             </div>
@@ -271,7 +273,7 @@ export default class CreateUserForm extends Component {
           <Link to={'/'}>
             <button type="submit">
               Concluir Cadastro
-          </button>
+            </button>
           </Link>
           <Link to={'/'}  >
             <button type="button">

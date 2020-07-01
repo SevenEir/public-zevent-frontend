@@ -17,4 +17,19 @@ export default {
       .then((res) => res.json())
       .then((json) => json);
   },
+  getEventById(id) {
+    console.log(id);
+    return fetch(`https://zevent-core.herokuapp.com/api/public-event/${id}`, {
+      method: 'GET',
+
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Accept: 'application/json',
+        'Accept-Charset': 'utf-8',
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => json);
+  },
 };

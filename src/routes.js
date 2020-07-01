@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NewEvent from './pages/Event/EventList';
 import NewUser from './pages/User/NewUser';
+import EventDetail from './pages/Event/EventDetail';
 
 export default function Routes() {
   return (
@@ -14,6 +15,7 @@ export default function Routes() {
         <Route path="/login" component={Login} />
         <Route path="/event/new" component={NewEvent} />
         <Route path="/user/new" component={NewUser} />
+        <Route path="/event" component={EventDetail} />
       </Switch>
     </BrowserRouter>
   );

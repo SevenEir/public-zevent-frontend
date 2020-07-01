@@ -1,0 +1,4 @@
+.container-event-detail, .container-eventLoading {
+  display: flex;
+  flex: 5;
+}

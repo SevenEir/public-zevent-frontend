@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 export default function EventItem(props) {
   const { event } = props;
@@ -21,7 +22,9 @@ export default function EventItem(props) {
       <p>Data: {getDateByDateTime(event.initDate)}</p>
       <p>Horário: {getHourByDateTime(event.initDate)}</p>
       <p>Assentos: {event.seats}</p>
-      <button className="eventItem-button">+ Informações</button>
+      <Link to={`/event/${event.id}`}>
+        <button className="eventItem-button">+ Informações</button>
+      </Link>
     </div>
   );
 }

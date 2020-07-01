@@ -39,8 +39,8 @@ export default class CreateEvent extends Component {
       desc: event.desc,
       value,
       seats: 250,
-      imageUrl: 'foo',
-      initialDate: address.initialDate,
+      imageUrl: 'https://www.smh.com.au/events/american-express-open-air-cinemas.jpg',
+      initDate: address.initDate,
       finishDate: address.finishDate,
       organization: {
         socialReason: organization.organizationSocialName,
@@ -73,7 +73,6 @@ export default class CreateEvent extends Component {
   }
 
   render() {
-    console.log("this", this.state);
     const steps = [
       { title: 'Evento', section: EventForm },
       { title: 'Endereço', section: AddressForm },

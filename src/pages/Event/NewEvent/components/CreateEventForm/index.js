@@ -39,7 +39,7 @@ export default class CreateEvent extends Component {
       desc: event.desc,
       value,
       seats: 250,
-      imageUrl: 'foo',
+      imageUrl: 'https://www.smh.com.au/events/american-express-open-air-cinemas.jpg',
       initDate: address.initDate,
       finishDate: address.finishDate,
       organization: {
